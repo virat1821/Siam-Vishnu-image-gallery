@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnuprakash - Siam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <h3 class="text-center mb-3">Image Gallery
+            </h3>
+            <div class="image-container">
+    
+            </div>
+    
+        </div>
+    </section>
+  
+    <script src="./libraries/jquery.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
+
+<div class="preview-modal" id="preview-modal">
+    <div class="preview-dialogue">
+        <div class="preview-content">
+            <div class="grid-column">
+                <div class="display-flex">
+                    <img  alt="userProfile" id="profileImg" class="profile-style">
+                    <div>
+                        <p class="" id="userName">Surface</p>
+                        <a class="font-11 underline-none color-primary" href="https://unsplash.com/@screenpost">Available for hire</a>
+                    </div>
+
+                </div>
+                <div class="right-align">
+                    <div class="btn-group">
+                        <a href="" download="" id="downloadBtn" class="btn-group-class download" title="Download photo">Download</a>
+                        <button onclick="toggleDrop()" class="group-btn dropbtn download" title="Choose your download size"
+                            data-content="Download"><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div id="myDropdown" class="dropdown-content">
+                           
+                          </div>
+                    </div>
+
+                    <button class="btn-default" title="Add to collection"><i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                    <button class="btn-default" title="Like"><i class="fa fa-heart" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="preview-body">
+
+            </div>
+        </div>
+        <div class="close-icon" onclick="openModal(2)">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+        <div class="prev-icon" onclick="prevNextFn('prev')">
+            <i class="fa fa-angle-left" aria-hidden="true"></i>
+        </div>
+        <div class="next-icon" onclick="prevNextFn('next')">
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
+
+<div class="preview-modal" id="collectionModal">
+    <div class="preview-dialogue">
+        <div class="preview-content collection-modal">
+            <div class="collection-div">
+                <div class="bg-image"></div>
+                <div class="collection-form">
+                    <h2>Add to Collection</h2>
+                    <div class="create-collection">
+                        <p>Create a new collection</p>
+                    </div>
+                    <div class="add-photo">
+                        <img  id="collectionPreview">
+                        <div class="collection-overlay">
+                            <div class="coll-content">
+                                <span class="font-11">0 Photos</span>
+                                <p class="mt-2">My First collection</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="close-icon" onclick="openModal(2)">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
